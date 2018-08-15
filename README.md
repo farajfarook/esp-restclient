@@ -34,7 +34,7 @@ void setup()
 void loop()
 {
   String response;
-  rest->get("users/2", &response);
+  rest.get("users/2", &response);
   Serial.println(response);
   delay(1000);
 }
@@ -57,7 +57,7 @@ void setup()
 void loop()
 {
   String response;
-  rest->get("users/2", &response);
+  rest.get("users/2", &response);
   Serial.println(response);
   delay(1000);
 }
