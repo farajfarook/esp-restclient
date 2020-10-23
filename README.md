@@ -29,14 +29,13 @@ void setup()
   
   // Create a REST Client for http://reqres.in/api/
   RestClient client("reqres.in", 80, "http", "/api/");
+  String response;
+  client.get("users/2", &response);
+  Serial.println(response);
 }
 
 void loop()
 {
-  String response;
-  rest.get("users/2", &response);
-  Serial.println(response);
-  delay(1000);
 }
 ```
 
@@ -52,13 +51,12 @@ void setup()
   
   // Create a REST Client for https://reqres.in/api/
   RestClient client("reqres.in", 443, "https", "/api/");
+  String response;
+  client.get("users/2", &response);
+  Serial.println(response);
 }
 
 void loop()
 {
-  String response;
-  rest.get("users/2", &response);
-  Serial.println(response);
-  delay(1000);
 }
 ```
